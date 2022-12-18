@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Edu+SA+Beginner&family=Prompt:ital,wght@1,200&display=swap');
+:root{
+    --primary: rgb(215, 214, 214);
+    --dark: rgba(51, 51, 51, 0.912);
+    --Dark: rgb(0,0,0);
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.829);
+    --light: rgb(255, 255, 255);
+    --orange:#FF8D29;
+    --orangelight: #ffffc2;
+    --light: #f2f2f2;
+}
+
+.html{
+    box-sizing: border-box;
+    color: bar(--dark);
+    font-family: 'Prompt', sans-serif;
+}
+
+.body{
+    font-family: Prompt;
+    background-color: #f4f4f4fe;
+    margin: 0;
+}
+
+.navbar{
+    background-color: var(--orange);
+    overflow: hidden;
+    height: 50px;
+}
+
+.navbar ul{
+    margin: 5px 25px 0;
+    padding-left: 0px;
+    list-style: none;
+}
+
+.right{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 17px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.navbar a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 17px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar a:hover{
+    background-color: var(--orangelight);
+    color: var(--orange);
+    border-radius: 7px;
+}
+
+.btn{
+    background-color: var(--orange);
+    border-radius: 7px;
+    color: var(--light);
+    padding: 0.6rem 1.5rem;
+    text-decoration: none;
+    border: 0;
+}
+
+.top-container a:hover{
+    background-color: var(--orangelight);
+    color: var(--orange);
+    border-radius: 5px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.wrapper{
+    display: grid;
+    gap: 25px;
+    margin: 25px 200px;
+    line-height: 1.5;
+
+}
+
+.top-container{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+        "showcase showcase top-box-a top-box-b"
+        "showcase showcase top-box-c top-box-c"
+    ;
+}
+
+.showcase{
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(images/banner-1.jpg);
+    background-size: cover ;
+    background-position: center;
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.showcase h1{
+    font-size: 3rem;
+    margin-bottom: 0px;
+}
+
+.showcase p{
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--light);
+    margin-top: 60px;
+}
+
+.showcase h2{
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.showcase h1 ,.showcase h2{
+    text-shadow: 2px 2px #333;
+    color: var(--light);
+}
+
+.top-box{
+    padding: 1.5rem;
+    display: grid;
+    align-items: center;
+    justify-items: left;
+    color: var(--light);
+}
+
+.top-box p {
+    text-shadow: 2px 2px #333;
+    color: var(--light);
+}
+
+.top-box .price{
+    font-size: 2.5rem;
+}
+
+.top-box-a{
+    background: url(images/banner-2.jpg);
+    background-size: cover ;
+    background-position: center;
+    grid-area: top-box-a;
+}
+
+.top-box-b{
+    background: url(images/banner-3.jpg);
+    background-size: cover ;
+    background-position: center;
+    grid-area: top-box-b;
+}
+
+.top-box-c{
+    background: url(images/banner-4.jpg);
+    background-size: cover ;
+    background-position: center;
+    grid-area: top-box-c;
+}
+
+.top-box-d{
+    grid-area: top-box-d;
+}
+
+.boxes{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+.box{
+    background: var(--orange);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+    color: var(--light);
+}
+
+.footer{
+    margin-top: 2rem;
+    color: var(--Dark);
+    text-align: center;
+    padding: 1 rem;
+}
+
+.open-slide{
+    display: none;
+    float: right;
+    line-height: 80p;
+}
+
+.side-nav{
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.side-nav a{
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ccc;
+    display: block;
+}
+
+.btn-close{
+    position: absolute;
+    top: 0;
+    right: 22px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main{
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+    transition: 0.3s;
+}
+
+@media(max-width: 768px){
+    .top-container{
+        display: grid;
+        gap: 20px;
+        grid-template-areas: 
+            "showcase showcase "
+            "showcase showcase "
+            "top-box-a top-box-b"
+            "top-box-c top-box-c"
+        ;
+    }
+    .showcase h1{
+        font-size: 1.8rem;
+    }
+    .showcase h2{
+        font-size: 1rem;
+    }
+    .showcase p{
+        font-size: 1rem;
+    }
+    .wrapper{
+        display: grid;
+        gap: 20px;
+        margin: 30px 50px;
+        line-height: 1.4;
+    
+    }
+    .top-box .price{
+        font-size: 2rem;
+    }
+    .navbar-nav{
+        display: none;
+    }
+    .open-slide{
+        display: block;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Foodie Restaurant</title>
+   
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/b35d25baf8.js" crossorigin="anonymous"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+       <span class="open-slide">
+        <a href="#" onclick="openMenu()">
+          <span class="material-icons" style="font-size: 30px">sort</span>
+        </a>
+      </span>
+      <li class="right"><i class="fa-solid fa-burger"></i> Foodie Restaurant</li>
+      <ul class="navbar-nav">
+
+        <li><a href="#"> <i class="fa-solid fa-house"> </i> หน้าหลัก</a></li>
+        <li><a href="#"> <i class="fa-solid fa-shop"> </i> สาขา</a></li>
+        <li><a href="#"> <i class="fa-solid fa-bowl-rice"> </i> รายการอาหาร</a></li>
+        <li><a href="#"> <i class="fa-solid fa-divide"> </i> โปรโมชั่น</a></li>
+        <li><a href="#"> <i class="fa-solid fa-address-book"> </i> ติดต่อเรา</a></li>
+      </ul>
+    </nav>
+
+
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeMenu()">&times;</a>
+      <a href="#">หน้าหลัก</a>
+      <a href="#">สาขา</a>
+      <a href="#">รายการอาหาร</a>
+      <a href="#">โปรโมชั่น</a>
+      <a href="#">ติดต่อเรา</a>
+    </div>
+
+    <div class="wrapper">
+      <section class="top-container">
+        <header class="showcase">
+          <h2>ลด 50%</h2>
+          <h1>เมื่อสั่ง Premium Pasta!</h1>
+          <p>เฉพาะสัปดาห์นี้เท่านั้น</p>
+          <a href="#" class="btn">Order now</a>
+        </header>
+
+        <div class="top-box top-box-a">
+          <p class="price">Meaty Pizza</p>
+          <a href="#" class="btn">Order now</a>
+        </div>
+
+        <div class="top-box top-box-b">
+          <p class="price">Juicy Burger</p>
+          <a href="#" class="btn">Order now</a>
+        </div>
+
+        <div class="top-box top-box-c">
+          <p class="price">Veggy Pizza -- 30% off</p>
+          <a href="#" class="btn">Order now</a>
+        </div>
+      </section>
+
+      <section class="boxes">
+        <div class="box">
+          <i class="fa-solid fa-mobile-screen-button fa-4x"></i>
+          <h3>083-4373083</h3>
+        </div>
+
+        <div class="box">
+          <i class="fa-brands fa-line fa-4x"></i>
+          <h3>@foodiee</h3>
+        </div>
+
+        <div class="box">
+          <i class="fa-brands fa-facebook fa-4x"></i>
+          <h3>Foodie <br> Restaurant</h3>
+        </div>
+
+        <div class="box">
+          <i class="fa-brands fa-instagram fa-4x"></i>
+          <h3>@foodiee2022</h3>
+        </div>
+
+        <div class="box">
+          <i class="fa-brands fa-twitter fa-4x"></i>
+          <h3>@foodiee2022</h3>
+        </div>
+      </section>
+
+      <footer>
+        <p>Rungnapha Aiamchukun 65309010012</p>
+      </footer>
+    </div>
+   
+    <script>
+      function openMenu(){
+        document.getElementById("side-menu").style.width="250px";
+        document.getElementById("main").style.marginRight="250px"
+      }
+      function closeMenu(){
+        document.getElementById("side-menu").style.width="0px";
+        document.getElementById("main").style.marginRight="0px"
+      }
+    </script>
+
+  </body>
+</html>
